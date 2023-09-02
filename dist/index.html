@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@300&display=swap" rel="stylesheet">
+    <title>Firebase 9</title>
+</head>
+<body>
+
+<main>
+    <div class="firebase">
+        <h1>Getting started with Firebase 9</h1>
+    </div>
+
+    <form class="add">
+
+        <h1>Add a disney character</h1>
+
+        <div class="add__field">
+
+        <label class="label" for="name">Name:</label>
+        <input class="input" type="text" name="name" required> 
+    </div>
+
+        <div class="add__field">
+
+        <label class="label" for="appearance">Appearance:</label>
+        <input class="input" type="text" name="appearance" required>
+</div>
+        <div class="add__field">
+
+        <label class="label" for="category">Category:</label>
+        <input class="input" type="text" name="category" required>
+</div>
+        <div class="add__field">
+
+        <label class="label" for="powers">Powers:</label>
+        <input class="input" type="text" name="powers" required></div>
+
+        <div class="add__button">
+        <button class="add-button">Add a new Disney character</button>
+    </div>
+    </form>
+<br>
+
+    <form class="delete">
+
+        <h1>Delete a disney character</h1>
+
+<div class="delete__field">
+        <label class="label" for="id">Document id:</label>
+        <input class="input" type="text" name="id" required>
+    </div>
+
+    <div class="delete__button">
+        <button class="delete-button">Delete a Disney character</button>
+    </div>
+
+    </form>
+
+    <form class="update">
+        <h1>Update a disney character</h1>
+
+        <div class="update__field">
+
+        <label class="label" for="id">Document ID:</label>
+        <input class="input" type="text" name="id" required></div>
+<div class="update__button">
+        <button class="update-button">Update a character</button>
+    </form>
+</main>
+
+    <script src="bundle.js"></script>
+</body>
+</html>

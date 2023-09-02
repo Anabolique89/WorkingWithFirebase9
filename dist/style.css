@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300,400');
+
+:root {
+    --color-dark: #111;
+    --color-light: #eee;
+    --color-highlight: #ff33aa;
+    --spacing-medium: 1.5rem;
+    --spacing-small: calc(var(--spacing-medium) * 0.5);
+    --spacing-xsmall: calc(var(--spacing-medium) * 0.25);
+    --outline-weight: 0.3rem;
+    --grid-values: auto / 3.2fr 5fr;
+  }
+
+body{
+  margin: 0;
+  padding: 0 5vw;
+  background-color: var(--color-dark);
+  font-family: 'Yantramanav', sans-serif;
+  color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+
+  flex-direction: row;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+h1, label, .label, legend, option, button {
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+  
+  h1 {
+    margin: var(--spacing-medium) 0 0 0;
+    grid-column: 2 / span 1;
+  }
+  .add{
+    margin: var(--spacing-medium) auto;
+    max-width: 70rem;
+    display: grid;
+    grid: var(--grid-values);
+    grid-gap: var(--spacing-medium);
+    width: 100vw;
+  }
+  .delete{
+        margin: var(--spacing-medium) auto;
+        max-width: 70rem;
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: var(--spacing-medium);
+        width: 100vw;
+      }
+
+  .update{
+    margin: var(--spacing-medium) auto;
+    max-width: 70rem;
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: var(--spacing-medium);
+    width: 100vw;
+  }
+      .add__field {
+        width: 100%;
+        grid-column: 1 / -1;
+        display: grid;
+        grid: var(--grid-values);
+        grid-auto-flow: row;
+        align-items: center;
+        grid-column-gap: var(--spacing-medium);
+        .label {
+          margin-left: var(--spacing-small);
+          grid-column: 1 / span 1;
+          text-align: right;
+        }
+        .delete__field, .update__field{
+            width: 100%;
+            grid-row: 2 / -2;
+            display: grid;
+            grid: auto;
+            grid-auto-flow: row;
+            align-items: right;
+            grid-column-gap: var(--spacing-medium);
+            .label {
+              margin-left: var(--spacing-small);
+              grid-row: 2 / span 2;
+              text-align: right;
+            }
+        }
+
+
+        .input-field {
+          padding: var(--spacing-xsmall);
+          grid-column: 2 / span 1;
+          background-color: var(--color-light);
+          font-family: 'Yantramanav', sans-serif;
+          color: var(--color-dark);
+          border: none;
+          outline: var(--outline-weight) solid var(--color-highlight);
+          transition: all 0.3s ease;
+          &:focus {
+            outline-color: var(--color-highlight);
+            font-size: 2rem;
+          }
+        }
+      }
+
+      
+.add__button, .delete__button, .update__button {
+    grid-column: 2 / span 1;
+    .add-button, .delete-button, .update-button {
+      padding: var(--spacing-small) var(--spacing-medium);
+      background-color: var(--color-dark);
+      color: var(--color-light);
+      border: 1px solid var(--color-light);
+      &:hover {
+        color: var(--color-highlight);
+        border-color: var(--color-highlight);
+      }
+      &:focus {
+        outline: var(--outline-weight) solid var(--color-highlight);
+      }
+      
+    }
+}
+/*
+  }
+  .add-button:hover{
+    background-color: var(--color-highlight);
+    color: var(--color-light);
+  }
+  .delete-button:hover{
+    background-color: var(--color-highlight);
+    color: var(--color-light);
+  }
+  .update-button:hover{
+    background-color: var(--color-highlight);
+    color: var(--color-light);
+  }
+  */
+
+  .firebase{
+    font-size: 20px;
+    font-weight: 100 important!;
+    color: #ff33aa;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    text-align: center;
+    padding:20px;
+  }
+  
+  @media all and (max-width: 650px) {
+    :root {
+      --grid-values: auto / 1fr 20fr;
+    }
+   
+    h1 {
+        grid-column: 1 / -1;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+        
+      }
+
+    .add__field, .delete__field, .update__field {
+        .label {
+          margin-left: 0;
+          margin-bottom: var(--spacing-xsmall);
+          grid-column: 1 / -1;
+          text-align: left;
+          justify-self: start;
+        }
+        .input {
+          grid-column: 1 / -1;
+        }
+        padding-left: 20px;
+        padding-right: 20px;
+        
+      }
+
+      
+  .add__button, .delete__button, .update__button {
+    grid-column: 1 / -1;
+    padding-left: 20px;
+    padding-right: 20px;
+   text-align: center;
+  }
+
+    }
